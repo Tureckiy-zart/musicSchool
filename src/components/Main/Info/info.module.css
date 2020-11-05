@@ -1,0 +1,36 @@
+.wrapper {
+  box-sizing: content-box;
+  background-color: #fff;
+  margin-bottom: 100px;
+}
+.wrapper img {
+  margin-bottom: 132px;
+}
+.title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 47px;
+  color: #5f5251;
+  position: relative;
+  margin-bottom: 34px;
+}
+.title::after {
+  content: "./Line.png";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  min-width: 200px;
+}
+.readMore {
+  background-color: transparent;
+  border: none;
+
+  color: #5f5251;
+  font-size: 20px;
+}
+
+.aboutText {
+  text-align: justify;
+  margin-bottom: 16px;
+}
