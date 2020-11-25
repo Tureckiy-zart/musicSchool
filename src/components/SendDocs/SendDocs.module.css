@@ -1,0 +1,33 @@
+.list {
+  margin-bottom: 152px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list_item {
+  width: 370px;
+}
+.list img {
+  margin-bottom: 20px;
+}
+.info {
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.name {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 34px;
+}
+.title {
+  margin-bottom: 144px;
+}
+.sendDocs {
+  box-shadow: 0px -8px 8px 3px rgba(0, 0, 0, 0.1),
+    0px 8px 8px 3px rgba(0, 0, 0, 0.1);
+    /* padding-bottom: 1px; */
+    height: 822px;
+}

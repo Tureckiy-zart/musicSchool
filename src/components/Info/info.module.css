@@ -11,7 +11,7 @@
   font-weight: normal;
   font-size: 40px;
   line-height: 47px;
-  color: #5f5251;
+  color: #7F9096;
   position: relative;
   margin-bottom: 34px;
 }
@@ -30,7 +30,7 @@
   font-size: 20px;
 }
 
-.aboutText {
+.text {
   text-align: justify;
   margin-bottom: 16px;
 }

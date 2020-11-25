@@ -1,0 +1,36 @@
+.list {
+  margin-bottom: 152px;
+  height: 560px ;
+}
+
+.list_item {
+  width: 370px;
+}
+.list img {
+  margin-bottom: 20px;
+}
+.info {
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 24px;
+}
+.name {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 34px;
+}
+.studyWays {
+  box-shadow: 0px -8px 8px 3px rgba(0, 0, 0, 0.1),
+    0px 8px 8px 3px rgba(0, 0, 0, 0.1);
+}
+.title {
+    margin-bottom: 134px;
+  }
+  .slides{
+    /* padding-bottom: 10px; */
+    /* margin-bottom: 20px!important; */
+  }
+  /* .slick-dots{
+   bottom: -75px!important;
+  } */

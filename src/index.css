@@ -19,8 +19,23 @@ code {
 }
 
 body {
-  background-color: #24292e;
-  width: 1440px;
+  background-color: #5F5251;
+  /* width: 1440px; */
+}
+
+h2 {
+  font-style: normal;
+  font-size: 40px;
+  line-height: 47px;
+  color: #5f5251;
+  font-weight: 700;
+  line-height: 47px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.sectionTitle {
+  color: #7f9096;
+  font-weight: 700;
 }
 
 *,
@@ -45,6 +60,7 @@ img {
   max-width: 100%;
   height: auto;
   box-sizing: border-box;
+
 }
 a {
   display: block;
@@ -75,4 +91,7 @@ span {
 h2 {
   color: #7f9096;
   text-transform: uppercase;
+}
+section{
+  background-color: #fff;
 }

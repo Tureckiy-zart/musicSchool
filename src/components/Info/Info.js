@@ -4,9 +4,9 @@ import styles from "./info.module.css";
 export const Info = (props) => {
   return (
     <section id="about" className={styles.wrapper}>
-      <img src="\info.png" alt="Заходите к нас и сами всё увидете:)"></img>
+      <img src="info.png" alt="Заходите к нас и сами всё увидете:)"></img>
       <h3 className={styles.title}>Коротка історія школи:</h3>
-      <p className={styles.aboutText}>
+      <p className={styles.text}>
         Сьогодні музична школа – це сучасний мистецький навчальний заклад, до
         якого протягом 55 років кожного дня приходять діти для неповторної
         зустрічі зі світом музики і мистецтва. За ці роки у стінах школи здобули

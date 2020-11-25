@@ -1,0 +1,22 @@
+.list {
+  margin-bottom: 152px;
+}
+
+.list_item {
+  width: 370px;
+  margin-bottom: 35px;
+}
+.list img {
+  margin-bottom: 20px;
+}
+.info {
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 24px;
+}
+.name {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 34px;
+}
