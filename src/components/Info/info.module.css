@@ -1,36 +1,123 @@
 .wrapper {
-  box-sizing: content-box;
-  background-color: #fff;
   margin-bottom: 100px;
 }
 .wrapper img {
   margin-bottom: 132px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  margin-bottom: 100px;
 }
+
+.container {
+  padding-left: 20px;
+}
+
 .title {
-  font-style: normal;
+  position: relative;
+  color: #5f5251;
   font-weight: normal;
   font-size: 40px;
   line-height: 47px;
-  color: #7F9096;
-  position: relative;
   margin-bottom: 34px;
 }
 .title::after {
-  content: "./Line.png";
   position: absolute;
-  left: 0;
-  top: 16px;
-  min-width: 200px;
+  content: "";
+  background-image: url("./Line.png");
+  height: 3px;
+  width: 416px;
+  left: 0px;
+  top: 50px;
 }
-.readMore {
-  background-color: transparent;
-  border: none;
-
-  color: #5f5251;
-  font-size: 20px;
-}
-
 .text {
   text-align: justify;
   margin-bottom: 16px;
+  font-style: Regular;
+  font-size: 20px;
+  line-height: 23px;
+  color: #7f9096;
 }
+/* .readMore { */
+  /* color: #5f5251;
+  font-size: 20px;
+  line-height: 23px; */
+/* } */
+
+.readMore,
+.readMore + label ~ div {
+  display: none;
+}
+
+.readMore + label,
+.readMore :checked + label {
+  border-bottom: 1px dotted #5f5251;
+
+  color: #5f5251;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.readMore:checked + label {
+  color: #7f9096;
+  border-bottom: 0;
+}
+
+.readMore:checked + label + div {
+  padding: 20px;
+  display: block;
+  /* background: #e8e5e5; */
+  -moz-box-shadow: inset 3px 3px 10px #7d8e8f;
+  /* -webkit-box-shadow: inset 5px 5px 12px #929898; */
+  -webkit-box-shadow: inset 0px -8px 8px 3px rgba(0, 0, 0, 0.1), 0px 8px 8px 3px rgba(0, 0, 0, 0.1);
+  /* box-shadow: inset 4px 4px 9px #818688; */
+  box-shadow: 0px -8px 8px 3px rgba(0, 0, 0, 0.1), 0px 8px 8px 3px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  -webkit-animation: fadeIn ease-in 0.7s;
+  -moz-animation: fadeIn ease-in 0.5s;
+  animation: fadeIn ease-in 0.7s;
+  border: 2px solid #cecbcb;
+  border-radius: 3px;
+  text-align: justify;
+
+  font-size: 20px;
+  line-height: 23px;
+  color: #7f9096;
+
+
+
+
+
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* .textHidden {
+  padding: 20px!important;
+ } */

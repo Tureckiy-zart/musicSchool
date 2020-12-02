@@ -1,14 +1,24 @@
 // import React, { Component } from "react";
-import { render } from "@testing-library/react";
 import React from "react";
-import Carousel from "../Carousel/Carousel";
+// import Carousel from "../Carousel/Carousel";
 import styles from "./Teachers.module.css";
+import TeachersGroup from "./TeachersGroup/TeachersGroup";
 
-const Teachers = (props) => {
+const Teachers = ({ data }) => {
   return (
     <section className={styles.wrapper}>
-      <h2 className={styles.title}>{props.title}</h2>
-      <Carousel {...props} />
+      <TeachersGroup
+        department={data["Фортепіанний відділ"]}
+        title={"Фортепіанний відділ"}
+      />
+      <TeachersGroup
+        department={data["Оркестровий відділ"]}
+        title={"Оркестровий відділ"}
+      />
+      <TeachersGroup
+        department={data["Відділ народних інструментів"]}
+        title={"Відділ народних інструментів"}
+      />
     </section>
   );
 };

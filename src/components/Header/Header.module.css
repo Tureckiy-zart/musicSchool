@@ -1,12 +1,15 @@
 .wrapper {
-  /* width: 100%; */
-  min-width: 100vh;
-  height: 786px;
-  background-color: rgb(140, 140, 140);
-  /* background-image: url("../../img/header/piano-801707_1920.jpg"); */
-  background-image: url("../../img/header/img1_titled.png");
-  box-sizing: inherit;
-  padding-top: 12px;
-  margin-bottom: 60px;
-}
+  background-image: url("../../img/header/piano-801707_1920.jpg");
+  background-size: cover;
+  /* padding-top: 12px; */
+  /* margin-bottom: 60px; */
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
 
+  margin-bottom: 80px;
+  box-sizing: inherit;
+}
+/* min-width: 100vh; */
+/* width: 100%; */
+/* height: 100%; */

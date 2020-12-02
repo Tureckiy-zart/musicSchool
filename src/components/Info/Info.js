@@ -1,44 +1,34 @@
-import React, { Component } from "react";
+import React from "react";
 import styles from "./info.module.css";
 
-export const Info = (props) => {
+export const Info = ({ data }) => {
   return (
     <section id="about" className={styles.wrapper}>
       <img src="info.png" alt="Заходите к нас и сами всё увидете:)"></img>
+     <div className={styles.container}>
       <h3 className={styles.title}>Коротка історія школи:</h3>
-      <p className={styles.text}>
-        Сьогодні музична школа – це сучасний мистецький навчальний заклад, до
-        якого протягом 55 років кожного дня приходять діти для неповторної
-        зустрічі зі світом музики і мистецтва. За ці роки у стінах школи здобули
-        музичну освіту 1200 учнів, 230 з них про довжили своє навчання у
-        спеціалізованих мистецьких закладах. Музика стала їхнім життям. Школа
-        може пишатися випускниками, які зараз навчаються та працюють не тільки в
-        нашій країні, а й у різних куточках світу:
-      </p>
-      <button className={styles.readMore}>Читати далі</button>
+      <p className={styles.text}>{data.data_01}</p>
+      
+      <div >
+
+        <input 
+        type="checkbox" 
+        id="readMore" 
+        className={styles.readMore} />
+        <label
+        //  className={( styles.readMore)} 
+        htmlFor="readMore">
+          Читати далі
+        </label>
+        <div className={styles.textHidden}>
+          <p>{data.data_02}</p>
+          <img src={data.img} alt="img" />
+        </div>
+      </div>
+
+     </div>
     </section>
   );
 };
 
 export default Info;
-
-// export default class Info extends Component {
-//   render() {
-//     return (
-//       <section id="about" className={styles.wrapper}>
-//         <img src="\info.png" alt="альтернативный текст"></img>
-//         <h3 className={styles.title}>Коротка історія школи:</h3>
-//         <p id="aboutText">
-//           Сьогодні музична школа – це сучасний мистецький навчальний заклад, до
-//           якого протягом 55 років кожного дня приходять діти для неповторної
-//           зустрічі зі світом музики і мистецтва. За ці роки у стінах школи
-//           здобули музичну освіту 1200 учнів, 230 з них про довжили своє навчання
-//           у спеціалізованих мистецьких закладах. Музика стала їхнім життям.
-//           Школа може пишатися випускниками, які зараз навчаються та працюють не
-//           тільки в нашій країні, а й у різних куточках світу:
-//         </p>
-//         <button className={styles.readMore}>Читати далі</button>
-//       </section>
-//     );
-//   }
-// }

@@ -21,7 +21,11 @@ export default function StudyWays(props) {
         <Slider {...settings}>
           {props.data.map((item) => (
             <li className={styles.listItem} key={item.id}>
-              <img width="370" height="370" src={item.img} alt={item.name} />
+              {item.img ? (
+                <img width="370" height="370" src={item.img} alt={item.name} />
+              ) : (
+                ""
+              )}
               {item.name ? <p className={styles.name}>{item.name}</p> : ""}
               {/* {item.name ? <p className={styles.name}>{item.name}</p> : ""} */}
             </li>

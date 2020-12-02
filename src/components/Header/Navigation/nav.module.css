@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  width: 1440px;
+  padding-top: 30px;
 }
 .mainNav {
  width: 816px;

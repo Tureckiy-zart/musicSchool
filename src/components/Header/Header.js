@@ -7,7 +7,9 @@ export const Header = (props) => {
   return (
     <>
       <header className={styles.wrapper}>
-        <Navigation />
+        <div className="container">
+          <Navigation />
+        </div>
       </header>
       <Suspense fallback={<div>Loading...</div>}>
         <Switch>
