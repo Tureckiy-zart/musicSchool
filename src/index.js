@@ -1,24 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
+import reportWebVitals from "./reportWebVitals";
 
 import "./index.css";
 import App from "./App";
 import AppHOOK from "./AppHOOK";
-import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Route } from "react-router-dom";
-import MultipleItems from "./App";
 
+//   <React.StrictMode>
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-    
-      {/* <Route  component={AppHOOK} /> */}
-      <Route component={App} />
-    </BrowserRouter>
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Route component={App} />
+  </BrowserRouter>,
   document.getElementById("root")
 );
+{
+  /* </React.StrictMode>, */
+}
+// ReactDOM.render(<App />, document.getElementById("root"));
 
 reportWebVitals();
-

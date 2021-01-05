@@ -4,9 +4,10 @@ import { GroupMusicInnerRight } from "./GroupMusicInner/GroupMusicInnerRight";
 import { GroupMusicInnerLeft } from "./GroupMusicInner/GroupMusicInnerLeft";
 
 const GroupMusic = ({ data, title }) => {
+  console.log('data', data)
   const { innerLeftGroup1, innerLeftGroup2, innerRight } = data;
   return (
-    <section className={styles.sendDocs}>
+    <section id='groupMusic' className={styles.sendDocs}>
       <h2 className={styles.title}>{title}</h2>
       <GroupMusicInnerLeft data={innerLeftGroup1} />
       <GroupMusicInnerRight data={innerRight} />

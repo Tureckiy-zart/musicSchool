@@ -1,32 +1,26 @@
 import React from "react";
 import styles from "./info.module.css";
 
-export const Info = ({ data }) => {
+export const Info = ({ data, children }) => {
   return (
     <section id="about" className={styles.wrapper}>
-      <img src="info.png" alt="Заходите к нас и сами всё увидете:)"></img>
-     <div className={styles.container}>
-      <h3 className={styles.title}>Коротка історія школи:</h3>
-      <p className={styles.text}>{data.data_01}</p>
-      
-      <div >
+        <img
+          className={styles.img}
+          src="/img/info/info.png"
+          alt="Заходите к нам и сами всё увидете:)"
+        ></img>
+        <h3 className={styles.title}>Коротка історія школи:</h3>
+        <p className={styles.text}>{data[0].date_01}</p>
 
-        <input 
-        type="checkbox" 
-        id="readMore" 
-        className={styles.readMore} />
-        <label
-        //  className={( styles.readMore)} 
-        htmlFor="readMore">
-          Читати далі
-        </label>
-        <div className={styles.textHidden}>
-          <p>{data.data_02}</p>
-          <img src={data.img} alt="img" />
+        <div className={styles.readMoreWraper}>
+          <input type="checkbox" id="readMore" className={styles.readMore} />
+          <label htmlFor="readMore">Читати далі</label>
+          <div className={styles.textHidden}>
+            <p>{data[0].date_02}</p>
+            <img src={data[0].img} alt="img" />
+          </div>
         </div>
-      </div>
-
-     </div>
+        {children}
     </section>
   );
 };

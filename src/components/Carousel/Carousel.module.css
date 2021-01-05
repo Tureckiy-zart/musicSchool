@@ -1,7 +1,10 @@
 .list {
   margin-bottom: 152px;
+  padding: 0;
 }
+/* .list:not(:last-child){
 
+} */
 .list_item {
   width: 370px;
   margin-bottom: 35px;
@@ -13,6 +16,8 @@
   margin-bottom: 20px;
   text-align: center;
   line-height: 24px;
+  padding: 10px;
+  min-height: 72px;
 }
 .name {
   margin-bottom: 20px;

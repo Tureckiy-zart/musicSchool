@@ -7,20 +7,19 @@ export const Header = (props) => {
   return (
     <>
       <header className={styles.wrapper}>
-        <div className="container">
-          <Navigation />
-        </div>
+   
+        <Navigation />
+  
       </header>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Switch>
-          {/* <Route exact path="/" component={AsincHomePage} /> */}
-          {/* <Route path="/movies/:movieId/" component={AsincMovieDetailsPage} /> */}
-          {/* <Route path="/movies/" component={AsincMoviesPage} /> */}
-          <Redirect to="/" />
-        </Switch>
-      </Suspense>
     </>
   );
 };
-
+// <Suspense fallback={<div>Loading...</div>}>
+//   <Switch>
+//     {/* <Route exact path="/" component={AsincHomePage} /> */}
+//     {/* <Route path="/movies/:movieId/" component={AsincMovieDetailsPage} /> */}
+//     {/* <Route path="/movies/" component={AsincMoviesPage} /> */}
+//     <Redirect to="/" />
+//   </Switch>
+// </Suspense>
 export default Header;

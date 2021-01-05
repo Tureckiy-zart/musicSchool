@@ -3,58 +3,23 @@ import { NavLink } from "react-router-dom";
 import styles from "./nav.module.css";
 
 const Navigation = () => (
-  <div className={styles.wrapper}> 
+  <div className={styles.wrapper}>
     <nav className={styles.mainNav}>
       <ul className={styles.list}>
         <li className={styles.list_item}>
-          <NavLink
-            exact
-            to="/about"
-            // style={{ padding: "20px", width: "100%" }}
-            // activeStyle={activeStyle}
-          >
-            Школа
-          </NavLink>
+          <a href="#about">Школа</a>
         </li>
         <li className={styles.list_item}>
-          <NavLink
-            // to="/movies"
-            to="/"
-            // style={{ padding: "20px", width: "100%" }}
-            // activeStyle={activeStyle}
-          >
-            Напрямки навчання
-          </NavLink>
+          <a href="#studyWays">Напрямки навчання</a>
         </li>
         <li className={styles.list_item}>
-          <NavLink
-            exact
-            to="/"
-            // style={{ padding: "20px", width: "100%" }}
-            // activeStyle={activeStyle}
-          >
-            Заходи
-          </NavLink>
+          <a href="#groupMusic">Заходи</a>
         </li>
         <li className={styles.list_item}>
-          <NavLink
-            // to="/movies"
-            to="/"
-            // style={{ padding: "20px", width: "100%" }}
-            // activeStyle={activeStyle}
-          >
-            Документи
-          </NavLink>
+          <a href="#sendDocs">Документи</a>
         </li>
         <li className={styles.list_item}>
-          <NavLink
-            // to="/movies"
-            to="/"
-            // style={{ padding: "20px", width: "100%" }}
-            // activeStyle={activeStyle}
-          >
-            Контакти
-          </NavLink>
+          <a href="#contacts">Контакти</a>
         </li>
       </ul>
     </nav>

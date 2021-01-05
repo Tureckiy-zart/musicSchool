@@ -5,8 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import styles from "./StudyWays.module.css";
 
-export default function StudyWays(props) {
-  console.log("props", props);
+export default function StudyWays({ data, title }) {
   var settings = {
     dots: true,
     infinite: true,
@@ -16,11 +15,11 @@ export default function StudyWays(props) {
     className: "slides",
   };
   return (
-    <section className={styles.studyWays}>
-      <h2 className={styles.title}>{props.title}</h2>
+    <section id="studyWays" className={styles.studyWays}>
+      <h2 className={styles.title}>{title}</h2>
       <ul className={styles.list}>
         <Slider {...settings}>
-          {props.data.map((item) => (
+          {data.map((item) => (
             <li className={styles.listItem} key={item.id}>
               {item.img ? (
                 <img width="370" height="370" src={item.img} alt={item.name} />

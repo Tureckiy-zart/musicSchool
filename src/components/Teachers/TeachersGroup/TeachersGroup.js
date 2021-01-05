@@ -6,7 +6,7 @@ const TeachersGroup = ({ title, children }) => {
   return (
     <section className={styles.wrapper}>
       <h2 className={styles.title}>{title}</h2>
-      {children}
+        {children}
     </section>
   );
 };

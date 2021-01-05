@@ -1,18 +1,18 @@
-.wrapper {
+/* .wrapper {
   margin-bottom: 100px;
-}
-.wrapper img {
-  margin-bottom: 132px;
+} */
+img {
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto;
+}
+.img {
   margin-bottom: 100px;
 }
 
-.container {
-  padding-left: 20px;
+.readMoreWraper {
+  margin-bottom: 80px;
 }
-
 .title {
   position: relative;
   color: #5f5251;
@@ -38,15 +38,11 @@
   line-height: 23px;
   color: #7f9096;
 }
-/* .readMore { */
-  /* color: #5f5251;
-  font-size: 20px;
-  line-height: 23px; */
-/* } */
 
 .readMore,
 .readMore + label ~ div {
   display: none;
+  margin-bottom: 20px;
 }
 
 .readMore + label,
@@ -68,12 +64,13 @@
 .readMore:checked + label + div {
   padding: 20px;
   display: block;
-  /* background: #e8e5e5; */
   -moz-box-shadow: inset 3px 3px 10px #7d8e8f;
   /* -webkit-box-shadow: inset 5px 5px 12px #929898; */
-  -webkit-box-shadow: inset 0px -8px 8px 3px rgba(0, 0, 0, 0.1), 0px 8px 8px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0px -8px 8px 3px rgba(0, 0, 0, 0.1),
+    0px 8px 8px 3px rgba(0, 0, 0, 0.1);
   /* box-shadow: inset 4px 4px 9px #818688; */
-  box-shadow: 0px -8px 8px 3px rgba(0, 0, 0, 0.1), 0px 8px 8px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px -8px 8px 3px rgba(0, 0, 0, 0.1),
+    0px 8px 8px 3px rgba(0, 0, 0, 0.1);
   padding: 30px;
   -webkit-animation: fadeIn ease-in 0.7s;
   -moz-animation: fadeIn ease-in 0.5s;
@@ -85,11 +82,6 @@
   font-size: 20px;
   line-height: 23px;
   color: #7f9096;
-
-
-
-
-
 }
 
 @-moz-keyframes fadeIn {
@@ -116,8 +108,3 @@
     opacity: 1;
   }
 }
-
-
-/* .textHidden {
-  padding: 20px!important;
- } */
