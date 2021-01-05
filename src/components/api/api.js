@@ -1,10 +1,21 @@
 import axios from "axios";
 
 // axios.defaults.baseURL = "http://musicschool/api/";
-
+console.log('999999999999', 999999999999)
 export const getData = async () => {
-  const {data} = await axios.get("http://musicschool/api/");
-  return data;
+  try {
+    const { data } = await axios.get("http://musicschool/api/");
+    // const { data } = await axios.get("http://mschool.zzz.com.ua/components/api/");
+    console.log("data", data);
+    return await data.reduce((r, a) => {
+      r[a.depart] = r[a.depart] || [];
+      r[a.depart].push(a);
+      return r;
+    }, {});
+  } catch (error) {
+    console.log("error", error);
+    throw new Error(error);
+  }
 };
 
 // export const getData = () => {

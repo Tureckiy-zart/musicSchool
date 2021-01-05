@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import styles from "./StudyWays.module.css";
 
 export default function StudyWays(props) {
+  console.log("props", props);
   var settings = {
     dots: true,
     infinite: true,

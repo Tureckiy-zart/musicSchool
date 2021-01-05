@@ -1,24 +1,25 @@
 // import React, { Component } from "react";
 import React from "react";
+import Carousel from "../Carousel/Carousel";
 // import Carousel from "../Carousel/Carousel";
 import styles from "./Teachers.module.css";
 import TeachersGroup from "./TeachersGroup/TeachersGroup";
 
-const Teachers = ({ data }) => {
+const Teachers = ({ piano, orcestra, nature }) => {
+  // console.log("data Teachers", data);
+  // const { piano } = data;
+  // console.log("piano", piano);
   return (
     <section className={styles.wrapper}>
-      <TeachersGroup
-        department={data["Фортепіанний відділ"]}
-        title={"Фортепіанний відділ"}
-      />
-      <TeachersGroup
-        department={data["Оркестровий відділ"]}
-        title={"Оркестровий відділ"}
-      />
-      <TeachersGroup
-        department={data["Відділ народних інструментів"]}
-        title={"Відділ народних інструментів"}
-      />
+      <TeachersGroup title="Фортепіанний відділ">
+        <Carousel department={piano} />
+      </TeachersGroup>
+      <TeachersGroup title="Оркестровий відділ">
+        <Carousel department={orcestra} />
+      </TeachersGroup>
+      <TeachersGroup title="Відділ народних інструментів">
+        <Carousel department={nature} />
+      </TeachersGroup>
     </section>
   );
 };
