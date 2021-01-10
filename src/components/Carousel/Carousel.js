@@ -5,18 +5,19 @@ import "slick-carousel/slick/slick-theme.css";
 import styles from "./Carousel.module.css";
 
 export default function Carousel({ department }) {
-  var settings = {
+  const settings = {
     dots: true,
     arrows: true,
-    // arrows: false,
+    arrows: false,
     infinite: true,
     // autoplay: true,
-    // autoplaySpeed: 2200,
+    // autoplaySpeed: 600,
     speed: 600,
     slidesToShow: 3,
     slidesToScroll: 3,
     className: "slides",
   };
+
   return (
     <div className={styles.list}>
       <Slider {...settings}>

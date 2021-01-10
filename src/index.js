@@ -7,6 +7,7 @@ import "./index.css";
 import App from "./App";
 import AppHOOK from "./AppHOOK";
 
+
 //   <React.StrictMode>
 ReactDOM.render(
   <BrowserRouter>

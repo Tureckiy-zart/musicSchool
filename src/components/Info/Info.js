@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./info.module.css";
 
 export const Info = ({ data, children }) => {
+  console.log('data', data)
+  console.log('44444444', 44444444)
   return (
     <section id="about" className={styles.wrapper}>
         <img

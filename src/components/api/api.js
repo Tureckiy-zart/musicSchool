@@ -7,7 +7,6 @@ export const getData = async () => {
     const { data } = await axios.get("http://musicschool/api/");
     // const { data } = await axios.get("http://mschool.zzz.com.ua/components/api/");
     // console.log("data", data);
-
     return await data.reduce((r, a) => {
       if (a.depart !== "groupMusic") {
         r[a.depart] = r[a.depart] || [];
@@ -20,6 +19,14 @@ export const getData = async () => {
     throw new Error(error);
   }
 };
+
+export const postData = async (inputData) => {
+  const url = "api/server.php";
+  const { data } = await axios.post(url, inputData);
+  console.log("data", data);
+  return await data;
+};
+
 // export const getData = () => {
 //   return axios.get("http://musicschool/api/").then((response) => response.data);
 // };

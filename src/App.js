@@ -1,5 +1,6 @@
 // import "./App.css";
 import React, { Component, useState, useEffect } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Loader from "react-loader";
 
 import Header from "./components/Header/Header";
@@ -9,10 +10,10 @@ import Teachers from "./components/Teachers/Teachers";
 import SendDocs from "./components/SendDocs/SendDocs";
 import StudyWays from "./components/StudyWays/StudyWays";
 import GroupMusic from "./components/GroupMusic/GroupMusic";
-import Navigation from "./components/Header/Navigation/Navigation";
 
-import { getData, reducedData } from "./components/api/api";
+import { getData, postData } from "./components/api/api";
 import Footer from "./components/Footer/Footer";
+import Form from "./components/Form/Form/Form";
 
 export default class App extends Component {
   state = {
@@ -26,8 +27,7 @@ export default class App extends Component {
           name: "Духовий оркестр",
           yaer: "Рік створення 1969р.",
           director: "Керівник І.І. Маснуха.",
-          info: `
-                       Досягнення: фестивал та конкурси: духових оркестрів в таборі “Молода гвардія” м.Одеса, “Сонячні кларнети” м.Київ, “Азовські вітрила” м.Бердянськ, “Золотий лелека” м.Миколаїв, “Сурми Конституції” м.Суми, “Боромля”, “Чарівна мідь оркестрів” м.Суми.`,
+          info: `Досягнення: фестивал та конкурси: духових оркестрів в таборі “Молода гвардія” м.Одеса, “Сонячні кларнети” м.Київ, “Азовські вітрила” м.Бердянськ, “Золотий лелека” м.Миколаїв, “Сурми Конституції” м.Суми, “Боромля”, “Чарівна мідь оркестрів” м.Суми.`,
         },
         {
           id: 102,
@@ -147,10 +147,10 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    this.x();
+    this.asyncData();
   }
 
-  async x() {
+  async asyncData() {
     const departments = await getData();
     this.setState((prevState) => ({
       ...prevState,
@@ -159,8 +159,34 @@ export default class App extends Component {
     }));
   }
 
+  onFormSubmit(e) {
+    e.preventDefault();
+    console.log("88888888888888888888", 88888888888888888888);
+    const form = document.querySelector("form"),
+      inputs = document.querySelectorAll("input"),
+      // selectors = document.querySelectorAll("select"),
+      clearInputs = () => {
+        inputs.forEach((item) => (item.value = ""));
+        // selectors.forEach((item) => (item.value = ""));
+      };
+    const formData = new FormData(form);
+    // const fd = formData.forEach((name, value) =>
+    //   console.log("object", value, ":", name)
+    // );
+
+    // postData(formData)
+    //   .then((res) => console.log("res", res))
+    //   .catch((error) => {
+    //     console.log("error", error);
+    //     throw new Error(error);
+    //   })
+    //   .finally(() => clearInputs());
+
+    clearInputs();
+    return formData;
+  }
+
   render() {
-    console.log("this.state", this.state);
     const {
       error,
       loaded,
@@ -173,16 +199,21 @@ export default class App extends Component {
       submission,
       author,
     } = this.state;
-    console.log("groupMusic", groupMusic);
     return (
       <>
         <Loader loaded={loaded}>
           {/* {error && <p>Что-то пошло не так: {error.message}</p>} */}
 
           <div className="container">
+            <Route path="/uploadContent" component={Form} />
+
+            {/* <Form /onSubmit={this.onFormSubmit} /> */}
             <Header />
-            <Info data={info}></Info>
+
+            <Info data={info} />
+
             <Teachers piano={piano} orchestra={orchestra} folk={folk} />
+
             <StudyWays data={studyWays} title="НАПРЯМКИ НАВЧАННЯ" />
             <GroupMusic data={groupMusic} title="КОЛЕКТИВНЕ МУЗИКУВАННЯ" />
             <SendDocs data={submission} title={"ПОДАЧА ДОКУМЕНТІВ"} />
