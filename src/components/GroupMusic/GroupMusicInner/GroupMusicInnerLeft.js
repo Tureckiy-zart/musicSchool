@@ -23,7 +23,7 @@ export const GroupMusicInnerLeft = ({data}) => {
                 <img width="650" height="430" src={item.img} alt={item.name} />
                 <div>
                   {item.name ? <p className={styles.name}>{item.name}</p> : ""}
-                  {item.yaer ? <p className={styles.yaer}>{item.yaer}</p> : ""}
+                  {item.year ? <p className={styles.year}>{item.year}</p> : ""}
                   {item.director ? (
                     <p className={styles.director}>{item.director}</p>
                   ) : (

@@ -30,7 +30,6 @@ if($result)
                     "position"=>$row['position'],
                     "date_01"=>$row['date_01'],
                     "date_02"=>$row['date_02'],
-                    "doc"=>$row['doc'],
                 ];
                 array_push($return,$obj);
 }

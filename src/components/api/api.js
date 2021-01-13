@@ -1,19 +1,25 @@
 import axios from "axios";
-import { getJSON } from "jquery";
 
 // axios.defaults.baseURL = "http://musicschool/api/";
 export const getData = async () => {
   try {
     const { data } = await axios.get("http://musicschool/api/");
     // const { data } = await axios.get("http://mschool.zzz.com.ua/components/api/");
-    // console.log("data", data);
-    return await data.reduce((r, a) => {
-      if (a.depart !== "groupMusic") {
-        r[a.depart] = r[a.depart] || [];
-        r[a.depart].push(a);
-      }
+    const reducedData = await data.reduce((r, a) => {
+      r[a.depart] = r[a.depart] || [];
+      r[a.depart].push(a);
       return r;
     }, {});
+
+    const sortedData = reducedData.groupMusic.reduce((r, i) => {
+      r[i.position] = r[i.position] || [];
+      r[i.position].push(i);
+      return r;
+    }, {});
+
+    reducedData.groupMusic = { ...sortedData };
+
+    return reducedData;
   } catch (error) {
     console.log("error", error);
     throw new Error(error);
@@ -21,7 +27,7 @@ export const getData = async () => {
 };
 
 export const postData = async (inputData) => {
-  const url = "api/server.php";
+  const url = "http://musicschool/public/api/uploadData.php ";
   const { data } = await axios.post(url, inputData);
   console.log("data", data);
   return await data;

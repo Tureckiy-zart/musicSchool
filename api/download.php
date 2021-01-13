@@ -1,6 +1,7 @@
 <?php
-// header('Access-Control-Allow-Origin: *');
-$file = 'download/info.png';
+header('Access-Control-Allow-Origin: *');
+$file = 'doc1.txt';
+echo __DIR__ . '/doc1.txt';
 if (file_exists($file)) {
     header('Content-Description: File Transfer');
     header('Content-Type: application/octet-stream');
@@ -13,5 +14,4 @@ if (file_exists($file)) {
 
     exit;
 }
-
     ?>

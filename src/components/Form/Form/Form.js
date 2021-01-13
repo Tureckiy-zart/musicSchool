@@ -1,15 +1,9 @@
 import React from "react";
 import styles from "./Form.module.css";
-const Form = () => {
+const Form = ({ onFormSubmit }) => {
+  
   return (
-    <form
-      action="/s.php"
-      method="post"
-      //   encType="multipart/form-data"
-      name="form"
-      //   onSubmit={props.onSubmit}
-    >
-      {/* <form action="/api/server.php" name="form" onSubmit={props.onSubmit}> */}
+    <form className="form" onSubmit={onFormSubmit}>
       <label htmlFor="img">
         Photo:
         <input id="img" type="file" name="img" />
@@ -18,9 +12,9 @@ const Form = () => {
         Title:
         <input id="title" name="title" />
       </label>
-      <label htmlFor="yaer">
+      <label htmlFor="year">
         Year:
-        <input id="yaer" name="yaer" />
+        <input id="year" name="year" />
       </label>
       <label htmlFor="director">
         Director:
@@ -29,6 +23,14 @@ const Form = () => {
       <label htmlFor="discription">
         Discription:
         <input id="discription" name="discription" />
+      </label>
+      <label htmlFor="position">
+        Position:
+        <select  id="position" name="position">
+          <option selected value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
       </label>
       <button type="submit">Send</button>
     </form>

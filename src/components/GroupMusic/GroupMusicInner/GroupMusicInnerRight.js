@@ -22,7 +22,7 @@ export const GroupMusicInnerRight = (props) => {
             <div className={styles.container}>
               <div>
                 {item.name ? <p className={styles.name}>{item.name}</p> : ""}
-                {item.yaer ? <p className={styles.yaer}>{item.yaer}</p> : ""}
+                {item.year ? <p className={styles.year}>{item.year}</p> : ""}
                 {item.director ? (
                   <p className={styles.director}>{item.director}</p>
                 ) : (

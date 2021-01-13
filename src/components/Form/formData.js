@@ -9,9 +9,9 @@ const formData = () => {
       selectors.forEach((item) => (item.value = ""));
     };
   const formData = new FormData(form);
-  const fd = formData.forEach((name, value) =>
-    console.log("object", name, ":", value)
-  );
+  // const fd = formData.forEach((name, value) =>
+  //   // console.log("object", name, ":", value)
+  // );
 
   // postData(formData)
   //   .then((res) => console.log("res", res))

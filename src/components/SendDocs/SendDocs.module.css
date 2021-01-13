@@ -23,11 +23,12 @@
   line-height: 34px;
 }
 .title {
-  margin-bottom: 144px;
+  margin-bottom: 144px;   padding-top: 50px;
 }
 .sendDocs {
   box-shadow: 0px -8px 8px 3px rgba(0, 0, 0, 0.1),
     0px 8px 8px 3px rgba(0, 0, 0, 0.1);
     /* padding-bottom: 1px; */
     height: 822px;
+ 
 }
