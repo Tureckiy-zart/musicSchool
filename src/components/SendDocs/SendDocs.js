@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./SendDocs.module.css";
-// import doc1 from 'public/download/doc1.txt'
 const SendDocs = ({ data, title }) => {
   return (
     <section id="sendDocs" className={styles.sendDocs}>

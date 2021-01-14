@@ -1,21 +1,17 @@
 // import "./App.css";
-import React, { Component, useState, useEffect } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import React, { Component } from "react";
+import { Route } from "react-router-dom";
+import { getData, postData } from "./components/api/api";
 import Loader from "react-loader";
-
 import Header from "./components/Header/Header";
 import Info from "./components/Info/Info";
 import Teachers from "./components/Teachers/Teachers";
-
 import SendDocs from "./components/SendDocs/SendDocs";
 import StudyWays from "./components/StudyWays/StudyWays";
 import GroupMusic from "./components/GroupMusic/GroupMusic";
-
-import { getData, postData } from "./components/api/api";
 import Footer from "./components/Footer/Footer";
 import Form from "./components/Form/Form/Form";
 import BackToTopBtn from "./components/buttons/BackToTopBtn/BackToTopBtn";
-
 export default class App extends Component {
   state = {
     loaded: false,
@@ -44,9 +40,10 @@ export default class App extends Component {
       clearInputs = () => {
         inputs.forEach((item) => (item.value = ""));
         selectors.forEach((item) => (item.value = ""));
-      };
-    const formData = new FormData(form);
-    postData(formData)
+      },
+      formData = new FormData(form);
+    
+      postData(formData)
       .catch((error) => {
         console.log("error", error);
         throw new Error(error);
@@ -81,7 +78,6 @@ export default class App extends Component {
             />
             <Header />
             <Info data={info} />
-
             <Teachers piano={piano} orchestra={orchestra} folk={folk} />
             <StudyWays data={studyWays} title="НАПРЯМКИ НАВЧАННЯ" />
             <GroupMusic data={groupMusic} title="КОЛЕКТИВНЕ МУЗИКУВАННЯ" />

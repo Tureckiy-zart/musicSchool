@@ -1,10 +1,10 @@
 import axios from "axios";
 
-// axios.defaults.baseURL = "http://musicschool/public/api";
+axios.defaults.baseURL = "http://musicschool/public/api/";
+
 export const getData = async () => {
   try {
-    const { data } = await axios.get("http://musicschool/public/api/index.php");
-    console.log('data', data)
+    const { data } = await axios.get("/index.php");
     const reducedData = await data.reduce((r, a) => {
       r[a.depart] = r[a.depart] || [];
       r[a.depart].push(a);
@@ -27,9 +27,13 @@ export const getData = async () => {
 };
 
 export const postData = async (inputData) => {
-  const url = "http://musicschool/public/api/uploadData.php";
-  const { data } = await axios.post(url, inputData);
-  return await data;
+  try {
+    const { data } = await axios.post("/uploadData.php", inputData);
+    return await data;
+  } catch (error) {
+    console.log("error", error);
+    throw new Error(error);
+  }
 };
 
 export default { getData };

@@ -6,7 +6,6 @@ import styles from "../GroupMusic.module.css";
 
 
 export const GroupMusicInnerRight = ({data}) => {
-  console.log('data2', data)
   var settings = {
     dots: true,
     infinite: true,

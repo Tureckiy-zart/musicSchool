@@ -1,6 +1,5 @@
-import React, { Suspense } from "react";
+import React from "react";
 import styles from "./Header.module.css";
-import { Redirect, Route, Switch } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -9,7 +8,6 @@ export const Header = () => {
         <ul className={styles.list}>
           <li className={styles.list_item}>
             <a href="#about">Школа</a>
-            {/* <NavLink to="/about">Школа</NavLink> */}
           </li>
           <li className={styles.list_item}>
             <a href="#studyWays">Напрямки навчання</a>
@@ -28,12 +26,4 @@ export const Header = () => {
     </header>
   );
 };
-// <Suspense fallback={<div>Loading...</div>}>
-//   <Switch>
-//     {/* <Route exact path="/" component={AsincHomePage} /> */}
-//     {/* <Route path="/movies/:movieId/" component={AsincMovieDetailsPage} /> */}
-//     {/* <Route path="/movies/" component={AsincMoviesPage} /> */}
-//     <Redirect to="/" />
-//   </Switch>
-// </Suspense>
 export default Header;

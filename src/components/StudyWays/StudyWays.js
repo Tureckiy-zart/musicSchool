@@ -27,7 +27,6 @@ export default function StudyWays({ data, title }) {
                 ""
               )}
               {item.name ? <p className={styles.name}>{item.name}</p> : ""}
-              {/* {item.name ? <p className={styles.name}>{item.name}</p> : ""} */}
             </li>
           ))}
         </Slider>
