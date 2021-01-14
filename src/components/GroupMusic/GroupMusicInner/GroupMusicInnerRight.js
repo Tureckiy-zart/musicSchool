@@ -5,7 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import styles from "../GroupMusic.module.css";
 
 
-export const GroupMusicInnerRight = (props) => {
+export const GroupMusicInnerRight = ({data}) => {
+  console.log('data2', data)
   var settings = {
     dots: true,
     infinite: true,
@@ -17,7 +18,7 @@ export const GroupMusicInnerRight = (props) => {
   return (
     <ul className={styles.list}>
       <Slider {...settings}>
-        {props.data.map((item) => (
+        {data.map((item) => (
           <li className={styles.listItem} key={item.id}>
             <div className={styles.container}>
               <div>
