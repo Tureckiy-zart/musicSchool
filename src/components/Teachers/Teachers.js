@@ -11,9 +11,11 @@ const Teachers = ({ piano, orchestra, folk }) => {
         <Carousel department={piano} />
       </TeachersGroup>
       <TeachersGroup title="Оркестровий відділ">
+        <h2 className={styles.title}>Оркестровий відділ</h2>
         <Carousel department={orchestra} />
       </TeachersGroup>
       <TeachersGroup title="Відділ народних інструментів">
+        <h2 className={styles.title}>Відділ народних інструментів</h2>
         <Carousel department={folk} />
       </TeachersGroup>
     </section>

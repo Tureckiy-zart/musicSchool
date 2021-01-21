@@ -10,6 +10,8 @@
 
 # production
 /build
+.toml
+.zip
 
 # misc
 .DS_Store
