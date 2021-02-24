@@ -1,13 +1,13 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-$host = 'music-school.zzz.com.ua'; // адрес сервера 
-$database = 'music_school'; // имя базы данных
-$user = 'musicschool'; // имя пользователя
-$password = 'Music1'; // пароль
-// $host = 'localhost'; // адрес сервера 
-// $database = 'musicschool'; // имя базы данных
-// $user = 'root'; // имя пользователя
-// $password = 'root'; // пароль
+//$host = 'music-school.zzz.com.ua'; // адрес сервера
+//$database = 'music_school'; // имя базы данных
+//$user = 'musicschool'; // имя пользователя
+//$password = 'Music1'; // пароль
+ $host = 'localhost'; // адрес сервера
+ $database = 'musicschool'; // имя базы данных
+ $user = 'root'; // имя пользователя
+ $password = 'root'; // пароль
 $link = mysqli_connect($host, $user, $password, $database) 
     or die("Ошибка " . mysqli_error($link));
  

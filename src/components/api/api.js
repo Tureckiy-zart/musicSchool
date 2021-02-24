@@ -1,11 +1,12 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "http://music-school.zzz.com.ua/api";
-// axios.defaults.baseURL = "http://musicschool/public/api/";
+// axios.defaults.baseURL = "http://music-school.zzz.com.ua/api";
+axios.defaults.baseURL = "http://musicschool/public/api/";
 
 export const getData = async () => {
   try {
     const { data } = await axios.get("/index.php");
+    
     const reducedData = await data.reduce((r, a) => {
       r[a.depart] = r[a.depart] || [];
       r[a.depart].push(a);
